@@ -63,9 +63,9 @@ const Intro = () => {
 
           {getAboutMeJsx('text-lg sm:text-base hidden sm:block')}
         </div>
-        <div className="justify-center mt-[-1rem] items-start flex relative">
+        <div className="justify-center mt-[rem] items-start flex relative">
           <motion.div
-            className="w-30 md:w-40"
+            className="w-20 sm:w-40"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
@@ -82,7 +82,7 @@ const Intro = () => {
         </div>
       </div>
 
-      {getAboutMeJsx('pt-2 text-lg sm:text-lg block sm:hidden')}
+      {getAboutMeJsx('pt-2 text-sm sm:text-lg block sm:hidden')}
     </section>
   );
 };
