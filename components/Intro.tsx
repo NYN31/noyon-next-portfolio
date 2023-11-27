@@ -6,11 +6,8 @@ import { IconContext } from 'react-icons';
 import profile_image from '@/public/profile_pic.jpg';
 import { motion } from 'framer-motion';
 import { ABOUT_ME, NAME, SOCIAL_PROFILES } from '@/constants/IntroConstants';
-import DOMPurify from 'dompurify';
 
 const Intro = () => {
-  const SANITIZE_ABOUT_ME = DOMPurify.sanitize(ABOUT_ME);
-
   const getAboutMeJsx = (style: string) => {
     return (
       <motion.p
@@ -21,7 +18,7 @@ const Intro = () => {
           delay: 0.1,
         }}
       >
-        <div dangerouslySetInnerHTML={{ __html: SANITIZE_ABOUT_ME }} />
+        <div dangerouslySetInnerHTML={{ __html: ABOUT_ME }} />
       </motion.p>
     );
   };
