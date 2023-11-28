@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <header className="z-[999] relative">
       <motion.div
-        className="fixed top-0 left-1/2 -translate-x-1/2 h-[4.5rem] w-full rounded-none border border-gray-300 border-opacity-40 bg-[#e5e7eb] bg-opacity-80 shadow-xl shadow-black/[0.03] backdrop-blur-[0.5rem] md:top-6 md:h-[3.25rem] md:w-[720px] md:rounded-full"
+        className="fixed top-0 left-1/2 -translate-x-1/2 h-[4.5rem] w-full rounded-none border border-gray-300 border-opacity-40 bg-[#FFFFFF] bg-opacity-80 shadow-xl shadow-black/[0.06] md:top-6 md:h-[3.25rem] md:w-[720px] md:rounded-full"
         initial={{ y: -100, x: '-50%', opacity: 0 }}
         animate={{ y: 0, x: '-50%', opacity: 1 }}
       ></motion.div>
@@ -25,7 +25,7 @@ const Header = () => {
                 animate={{ y: 0, opacity: 1 }}
               >
                 <Link
-                  className="flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300"
+                  className="flex w-full items-center justify-center px-3 py-3 text-gray-950 hover:text-gray-500 transition dark:text-gray-500 dark:hover:text-gray-300"
                   href={link.hash}
                 >
                   {link.name}
