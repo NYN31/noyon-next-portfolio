@@ -7,6 +7,7 @@ import profile_image from '@/public/profile_pic.jpg';
 import { motion } from 'framer-motion';
 import { ABOUT_ME, NAME, SOCIAL_PROFILES } from '@/constants/IntroConstants';
 import SectionHeading from './SectionHeading';
+import GenericCard from './cards/GenericCard';
 
 const Intro = () => {
   const getAboutMeJsx = (style: string) => {
@@ -68,7 +69,7 @@ const Intro = () => {
 
         <div className="flex justify-center items-center relative translate-x-7 order-1 sm:order-2">
           <motion.div
-            className="w-40 sm:w-40 mx-5"
+            className="w-40 sm:w-40 px-2"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
@@ -79,13 +80,16 @@ const Intro = () => {
             <Image
               src={profile_image}
               alt="Profile Picture"
-              className="h-full w-full sm:h-42 sm:w-36 rounded-full sm:rounded border-[0.15rem] border-gray-400"
+              className="h-full w-full rounded-[50%] sm:rounded border-[0.15rem] border-gray-400"
             />
           </motion.div>
         </div>
       </div>
-
-      {getAboutMeJsx('pt-2 text-sm sm:text-lg block sm:hidden')}
+      <div className="sm:hidden">
+        <GenericCard>
+          {getAboutMeJsx('pt-2 text-sm sm:text-lg block sm:hidden')}
+        </GenericCard>
+      </div>
     </section>
   );
 };
