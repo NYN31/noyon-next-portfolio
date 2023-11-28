@@ -6,6 +6,7 @@ import { IconContext } from 'react-icons';
 import profile_image from '@/public/profile_pic.jpg';
 import { motion } from 'framer-motion';
 import { ABOUT_ME, NAME, SOCIAL_PROFILES } from '@/constants/IntroConstants';
+import SectionHeading from './SectionHeading';
 
 const Intro = () => {
   const getAboutMeJsx = (style: string) => {
@@ -23,9 +24,10 @@ const Intro = () => {
     );
   };
   return (
-    <section className="my-5">
-      <div className="grid grid-cols-4 gap-5">
-        <div className="col-span-3 space-y-3">
+    <section className="space-y-5">
+      <SectionHeading>Intro</SectionHeading>
+      <div className="grid grid-cols-1 sm:grid-cols-4 gap-5">
+        <div className="col-span-4 sm:col-span-3 space-y-3 flex flex-col items-center sm:items-start order-2 sm:order-1">
           <div className="flex justify-between text-lg md:text-2xl font-medium">
             <motion.h1
               initial={{ opacity: 0, y: 100 }}
@@ -63,9 +65,10 @@ const Intro = () => {
 
           {getAboutMeJsx('text-lg sm:text-base hidden sm:block')}
         </div>
-        <div className="justify-center mt-[rem] items-start flex relative">
+
+        <div className="flex justify-center items-center relative translate-x-7 order-1 sm:order-2">
           <motion.div
-            className="w-20 sm:w-40"
+            className="w-40 sm:w-40"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
@@ -76,7 +79,7 @@ const Intro = () => {
             <Image
               src={profile_image}
               alt="Profile Picture"
-              className="sm:h-42 sm:w-36 rounded border-[0.15rem] border-gray-400"
+              className="h-full w-110 sm:h-42 sm:w-36 rounded border-[0.15rem] border-gray-400"
             />
           </motion.div>
         </div>
