@@ -14,7 +14,7 @@ const Header = () => {
         animate={{ y: 0, x: '-50%', opacity: 1 }}
       ></motion.div>
 
-      <nav className="flex fixed p-0 top-[0.15rem] h-12 py-2 left-1/3 -translate-x-1/3 md:left-1/2 md:-translate-x-1/2 md:top-[1.7rem] md:h-[initial] md:py-0">
+      <nav className="flex fixed p-0 top-[0.15rem] h-12 py-2 left-1/2 -translate-x-1/2 md:left-1/2 md:-translate-x-1/2 md:top-[1.7rem] md:h-[initial] md:py-0">
         <ul className="flex flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 md:w-[initial] md:flex-nowrap md:gap-5">
           {NAVBAR_LINKS.map(link => {
             return (

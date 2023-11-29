@@ -26,7 +26,7 @@ const Intro = () => {
   };
 
   return (
-    <section id="intro" className="scroll-mt-28">
+    <section id="intro" className="scroll-mt-28 space-y-5">
       <SectionHeading>Intro</SectionHeading>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
         <div className="col-span-4 md:col-span-3 space-y-3 flex flex-col items-center md:items-start order-2 md:order-1">
