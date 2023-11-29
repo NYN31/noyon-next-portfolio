@@ -22,7 +22,7 @@ const TechSkills = () => {
   };
 
   return (
-    <section className="mb-28 max-w-full sm:mb-40">
+    <section id="skills" className="mb-28 sm:mb-40 scroll-mt-28">
       <SectionHeading>My skills</SectionHeading>
       <GenericCard>
         <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">

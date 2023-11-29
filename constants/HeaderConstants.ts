@@ -1,16 +1,12 @@
 export const NAVBAR_LINKS = [
   {
-    name: 'Home',
-    hash: '#home',
+    name: 'Intro',
+    hash: '#intro',
   },
-  {
-    name: 'About',
-    hash: '#about',
-  },
-  {
-    name: 'Projects',
-    hash: '#projects',
-  },
+  // {
+  //   name: 'Projects',
+  //   hash: '#projects',
+  // },
   {
     name: 'Skills',
     hash: '#skills',
@@ -19,8 +15,8 @@ export const NAVBAR_LINKS = [
     name: 'Experience',
     hash: '#experience',
   },
-  {
-    name: 'Contact',
-    hash: '#contact',
-  },
+  // {
+  //   name: 'Contact',
+  //   hash: '#contact',
+  // },
 ] as const;
