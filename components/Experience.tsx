@@ -1,11 +1,6 @@
 'use client';
 
 import React from 'react';
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
 import SectionHeading from './SectionHeading';
 import { MY_EXPERIENCE, experiencesData } from '@/constants/ExperienceConstant';
 import GenericCard from './cards/GenericCard';
@@ -14,39 +9,46 @@ const Experience = () => {
     <section id="experience" className="scroll-mt-28 mb-28 sm:mb-40">
       <SectionHeading>{MY_EXPERIENCE}</SectionHeading>
       <GenericCard>
-        <VerticalTimeline lineColor="#888">
-          {experiencesData.map((item, index) => (
-            <React.Fragment key={index}>
-              <VerticalTimelineElement
-                visible={true}
-                contentStyle={{
-                  background: '#FFFFFF',
-                  boxShadow:
-                    '0px 2px 4px 0px rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.05)',
-                  border: '1px solid #DDDDDD',
-                  textAlign: 'left',
-                  padding: '1.3rem 2rem',
-                }}
-                contentArrowStyle={{
-                  borderRight: '0.4rem solid #9ca3af',
-                }}
-                date={item.date}
-                icon={item.icon}
-                iconStyle={{
-                  background: '#FFFFFF',
-                  fontSize: '1.5rem',
-                }}
-              >
-                <h3 className="font-semibold capitalize">{item.title}</h3>
-                <p className="font-normal !mt-0">{item.location}</p>
-                <p
-                  className="!mt-1 !font-normal text-gray-700 dark:text-white/75"
-                  dangerouslySetInnerHTML={{ __html: item.description }}
-                ></p>
-              </VerticalTimelineElement>
-            </React.Fragment>
+        <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
+          {experiencesData.map((experience, index) => (
+            <div
+              key={index}
+              className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active md:px-4"
+            >
+              <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 group-[.is-active]:bg-emerald-500 text-slate-500 group-[.is-active]:text-emerald-50 shadow shrink-1 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                <svg
+                  className="fill-current"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="12"
+                  height="10"
+                >
+                  <path
+                    fill-rule="nonzero"
+                    d="M10.422 1.257 4.655 7.025 2.553 4.923A.916.916 0 0 0 1.257 6.22l2.75 2.75a.916.916 0 0 0 1.296 0l6.415-6.416a.916.916 0 0 0-1.296-1.296Z"
+                  />
+                </svg>
+              </div>
+
+              <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded border border-slate-200 shadow-lg">
+                <div className="flex flex-col mb-1">
+                  <div className="font-bold text-slate-900">
+                    {experience.title}
+                  </div>
+                  <time className="font-caveat font-extrabold text-xs text-gray-500">
+                    {experience.location}
+                  </time>
+                  <time className="font-caveat font-medium text-gray-900">
+                    {experience.date}
+                  </time>
+                </div>
+                <div
+                  className="text-slate-500"
+                  dangerouslySetInnerHTML={{ __html: experience.description }}
+                ></div>
+              </div>
+            </div>
           ))}
-        </VerticalTimeline>
+        </div>
       </GenericCard>
     </section>
   );
