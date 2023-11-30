@@ -1,8 +1,8 @@
 import Header from '@/components/Header';
 import './globals.css';
-import { Inter } from 'next/font/google';
+import { DM_Mono } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'] });
+const dm_mono = DM_Mono({ weight: '400', subsets: [] });
 
 export const metadata = {
   title: 'Create Next App',
@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} bg-[#e5e7eb] text-gray-950 relative py-0 md:py-3`}
+        className={`${dm_mono.className} bg-[#e5e7eb] text-gray-950 relative py-0 md:py-3 `}
       >
         <Header />
         {children}

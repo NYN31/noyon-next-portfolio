@@ -9,7 +9,7 @@ import { IoIosMail } from 'react-icons/io';
 export const NAME = 'Md Sajjad Hosen Noyon';
 
 export const ABOUT_ME =
-  '<p>Hello, I am passionate <b>software engineer and problem solver</b>. I am currently working at <b>@Exabyting</b> as Software Engineer with <b>2 years</b> of professional experience.</p>';
+  '<p>Hello, I am passionate <em><b>software engineer and problem solver</b></em>. I am currently working at <em><b>@Exabyting</b></em> as Software Engineer with <em><b>2 years</b></em> of professional experience.</p>';
 
 export const ICON_SIZE = 22;
 
