@@ -15,4 +15,8 @@ export const NAVBAR_LINKS = [
     name: 'Projects',
     hash: '#projects',
   },
+  {
+    name: 'Education',
+    hash: '#education',
+  },
 ] as const;
