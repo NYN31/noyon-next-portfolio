@@ -26,7 +26,7 @@ const Intro = () => {
   };
 
   return (
-    <section id="intro" className="scroll-mt-28 ">
+    <section id="intro" className="scroll-mt-32">
       <GenericCard>
         <div className="space-y-5">
           <SectionHeading>Intro</SectionHeading>

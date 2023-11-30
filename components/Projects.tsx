@@ -7,8 +7,8 @@ import ProjectCard from './cards/ProjectCard';
 const Projects = () => {
   return (
     <section id="projects" className="scroll-h-28 mb-28 sm:mb-40 ">
-      <SectionHeading>{PROJECT_HEADING}</SectionHeading>
       <GenericCard>
+        <SectionHeading>{PROJECT_HEADING}</SectionHeading>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
           {projectsData.map((project, index) => (
             <React.Fragment key={index}>

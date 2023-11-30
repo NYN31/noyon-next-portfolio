@@ -7,13 +7,11 @@ import SkillItemCard from './cards/SkillItemCard';
 const TechSkills = () => {
   return (
     <section id="skills" className="mb-28 sm:mb-40 scroll-mt-28">
-      <SectionHeading>My skills</SectionHeading>
       <GenericCard>
+        <SectionHeading>My skills</SectionHeading>
         <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
           {skillsData.map((skill, index) => (
-            <SkillItemCard key={index}>
-              <p className="hover:scale-105 transition-all ease-out">{skill}</p>
-            </SkillItemCard>
+            <SkillItemCard key={index} skill={skill} />
           ))}
         </ul>
       </GenericCard>

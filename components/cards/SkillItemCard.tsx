@@ -1,10 +1,9 @@
-import { childrenProps } from '@/types/CommonTypes';
 import React from 'react';
 
-const SkillItemCard = ({ children }: childrenProps) => {
+const SkillItemCard: React.FC<{ skill: string }> = ({ skill }) => {
   return (
-    <div className="max-w-[100%] bg-[#FFFFFF] py-2 px-4 text-sm rounded-lg border border-gray-200 shadow-lg shadow-black/[0.03]">
-      <div>{children}</div>
+    <div className="max-w-[100%] bg-[#9DEECB] py-2 px-4 text-sm font-medium hover:font-bold rounded-lg border border-gray-200 shadow-lg shadow-black/[0.03]">
+      <p className="hover:scale-102 transition-all ease-out">{skill}</p>
     </div>
   );
 };
