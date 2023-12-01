@@ -9,14 +9,17 @@ const ProjectCard: React.FC<{ project: ProjectProps }> = ({ project }) => {
           <div className="flex items-center space-x-2">
             <p className="text-lg font-bold">{project.title}</p>
           </div>
-          <p dangerouslySetInnerHTML={{ __html: project.description }}></p>
+          <p
+            className="text-slate-700"
+            dangerouslySetInnerHTML={{ __html: project.description }}
+          ></p>
         </div>
 
         <div className="flex flex-wrap gap-3 items-center">
           {project.tags.map(tag => (
             <div
               key={tag}
-              className="border border-gray-300 py-1 px-2 rounded bg-orange-400 font-bold text-sm text-white shadow-lg hover:scale-105"
+              className="border border-gray-300 py-1 px-3 rounded-full bg-slate-700 font-bold text-sm text-white shadow-lg hover:scale-105"
             >
               {tag}
             </div>

@@ -9,7 +9,7 @@ export const experiencesData = [
     date: 'July 2021 - Present',
   },
   {
-    title: 'Teacher Asistant @ IIUC',
+    title: 'Teaching Asistant @ IIUC',
     location: 'Kumira, Sitakunda, Chittagong',
     description:
       'I worked as a teacher assistant for 6 months in my university when I had been persuing my undergraduate degree on CSE.',
