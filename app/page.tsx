@@ -1,3 +1,4 @@
+import CompetitivePrograming from '@/components/CompetitivePrograming';
 import Education from '@/components/Education';
 import Experience from '@/components/Experience';
 import Intro from '@/components/Intro';
@@ -13,6 +14,7 @@ export default function Home() {
         <Experience />
         <Projects />
         <Education />
+        <CompetitivePrograming />
       </div>
     </main>
   );

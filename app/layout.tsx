@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${dm_mono.className} bg-[#e5e7eb] text-gray-950 relative py-0 md:py-3 text-lg`}
+        className={`${dm_mono.className} bg-[#e5e7eb] text-gray-950 relative py-0 md:py-3 text-md md:text-lg`}
       >
         <Header />
         {children}
