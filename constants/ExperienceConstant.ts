@@ -5,7 +5,7 @@ export const experiencesData = [
     title: 'Software Engineer @ Exabyting',
     location: 'Mohakhali DOHS, Dhaka',
     description:
-      '<ul style="list-style-type:disc;"><li>Develop rest api.</li><li>Designing and making functional front-end application.</li><li>Working in Agile/Scrum development process.</li><li>Working with bKash Limited as Partner Team.</li><li>Working with internal team also.</li><li>Project estimation for delivery.</li><li>Learning clean coding, communication.</li><li>Demo presentation on demand.</li><li>Took decision by myself if required.</li></ul>',
+      '<ul style="list-style-type:disc;margin-left:20px;"><li>Develop rest api.</li><li>Designing and making functional front-end application.</li><li>Working in Agile/Scrum development process.</li><li>Working with bKash Limited as Partner Team.</li><li>Working with internal team also.</li><li>Project estimation for delivery.</li><li>Learning clean coding, communication.</li><li>Demo presentation on demand.</li><li>Took decision by myself if required.</li></ul>',
     date: 'July 2021 - Present',
   },
   {

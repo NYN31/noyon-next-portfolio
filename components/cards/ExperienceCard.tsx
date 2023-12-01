@@ -5,8 +5,8 @@ const ExperienceCard: React.FC<{ experience: ExperienceProps }> = ({
   experience,
 }) => {
   return (
-    <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active md:px-4">
-      <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 group-[.is-active]:bg-emerald-500 text-slate-500 group-[.is-active]:text-emerald-50 shadow shrink-1 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+    <div className="relative flex items-center justify-between group is-active">
+      <div className="flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full border border-white bg-slate-300 group-[.is-active]:bg-emerald-500 group-[.is-active]:text-emerald-50 shadow shrink-1">
         <svg
           className="fill-current"
           xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +20,7 @@ const ExperienceCard: React.FC<{ experience: ExperienceProps }> = ({
         </svg>
       </div>
 
-      <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-lg border border-slate-200 shadow-lg">
+      <div className="w-[calc(100%-3rem)] md:w-[calc(100%-4rem)] bg-white p-6 rounded-lg border border-slate-200 shadow-lg">
         <div className="flex flex-col mb-1">
           <div className="font-bold text-slate-900">{experience.title}</div>
           <time className="font-caveat font-extrabold text-xs text-gray-500">

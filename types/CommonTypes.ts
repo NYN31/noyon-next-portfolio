@@ -14,3 +14,10 @@ export interface ProjectProps {
   description: string;
   tags: string[];
 }
+
+export interface EducationProps {
+  title: string;
+  institute: string;
+  passingYear: string;
+  gpa: string;
+}
