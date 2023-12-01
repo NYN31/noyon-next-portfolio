@@ -21,3 +21,11 @@ export interface EducationProps {
   passingYear: string;
   gpa: string;
 }
+
+export interface CompetitiveProgramingCardProps {
+  name: string;
+  topRating: string;
+  participationInContest: string;
+  totalSolve: string;
+  link: string;
+}
