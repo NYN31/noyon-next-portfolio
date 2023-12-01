@@ -67,7 +67,7 @@ const Intro = () => {
                 })}
               </motion.div>
 
-              {getAboutMeJsx('text-lg sm:text-base hidden md:block')}
+              {getAboutMeJsx('text-lg sm:text-base text-slate-700 hidden md:block')}
             </div>
 
             <div className="flex justify-center items-center relative translate-x-7 md:translate-x-0 order-1 md:order-2">

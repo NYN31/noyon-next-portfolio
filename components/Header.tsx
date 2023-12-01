@@ -14,7 +14,7 @@ const Header = () => {
                 className="flex items-center justify-center relative"
               >
                 <Link
-                  className="flex w-full items-center justify-center px-3 py-2 md:py-3 text-gray-950 hover:text-gray-500 transition dark:text-gray-500 dark:hover:text-gray-300"
+                  className="flex w-full items-center justify-center px-3 py-2 md:py-3 text-gray-950 font-semibold hover:text-gray-500 transition dark:text-gray-500 dark:hover:text-gray-300"
                   href={link.hash}
                 >
                   {link.name}

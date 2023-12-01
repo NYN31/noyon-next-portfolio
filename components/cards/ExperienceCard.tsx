@@ -20,8 +20,8 @@ const ExperienceCard: React.FC<{ experience: ExperienceProps }> = ({
         </svg>
       </div>
 
-      <div className="w-[calc(100%-3rem)] md:w-[calc(100%-4rem)] bg-white p-6 rounded-lg border border-slate-200 shadow-lg">
-        <div className="flex flex-col mb-1">
+      <div className="w-[calc(100%-2.3rem)] sm:w-[calc(100%-3rem)] md:w-[calc(100%-4rem)] bg-white p-6 rounded-lg border border-gray-300 shadow-lg space-y-5">
+        <div className="flex flex-col space-y-1">
           <div className="font-bold text-slate-900">{experience.title}</div>
           <time className="font-caveat font-extrabold text-xs text-gray-500">
             {experience.location}
@@ -31,7 +31,7 @@ const ExperienceCard: React.FC<{ experience: ExperienceProps }> = ({
           </time>
         </div>
         <div
-          className="text-slate-500"
+          className="text-slate-700"
           dangerouslySetInnerHTML={{ __html: experience.description }}
         ></div>
       </div>
