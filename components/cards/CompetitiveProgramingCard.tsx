@@ -49,7 +49,7 @@ const CompetitiveProgramingCard: React.FC<{
         </div>
 
         <Link href={cp.link} className="mt-2">
-          <Button content={'Click here!'} />
+          <Button content={'Click me!'} />
         </Link>
       </div>
     </div>

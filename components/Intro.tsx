@@ -2,7 +2,6 @@
 
 import Image from 'next/image';
 import React from 'react';
-import { IconContext } from 'react-icons';
 import profile_image from '@/public/profile_pic.jpg';
 import { motion } from 'framer-motion';
 import { ABOUT_ME, NAME, SOCIAL_PROFILES } from '@/constants/IntroConstants';
@@ -53,18 +52,14 @@ const Intro = () => {
       >
         {SOCIAL_PROFILES.map(link => {
           return (
-            <IconContext.Provider
+            <a
               key={link.title}
-              value={{ color: link.color }}
+              href={link.link}
+              target="_blank"
+              className="hover:scale-110 transition-all ease-out size-100"
             >
-              <a
-                href={link.link}
-                target="_blank"
-                className="hover:scale-110 transition-all ease-out size-100"
-              >
-                {link.icon}
-              </a>
-            </IconContext.Provider>
+              {link.icon}
+            </a>
           );
         })}
       </motion.div>
@@ -113,7 +108,9 @@ const Intro = () => {
           </div>
           <div className="md:hidden">
             <GenericCard>
-              {getAboutMeJsx('pt-2 text-sm sm:text-md block md:hidden text-justify')}
+              {getAboutMeJsx(
+                'pt-2 text-sm sm:text-md block md:hidden text-justify'
+              )}
             </GenericCard>
           </div>
         </div>

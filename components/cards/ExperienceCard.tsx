@@ -9,7 +9,7 @@ const ExperienceCard: React.FC<{ experience: ExperienceProps }> = ({
   const { theme } = useTheme();
   return (
     <div className="relative flex items-center justify-between group is-active">
-      <div className="flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full border border-white dark:border-gray-700 bg-slate-300 group-[.is-active]:bg-emerald-500 dark:group-[.is-active]:bg-[#1e40af] group-[.is-active]:text-emerald-50 shadow shrink-1">
+      <div className="flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full border border-white dark:border-gray-700 bg-slate-300 group-[.is-active]:bg-emerald-500 dark:group-[.is-active]:bg-[#65a30d] group-[.is-active]:text-emerald-50 shadow shrink-1">
         <svg
           className="fill-current"
           xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +29,7 @@ const ExperienceCard: React.FC<{ experience: ExperienceProps }> = ({
             {experience.title}
           </div>
           <div className="flex flex-row gap-3 items-center">
-            <div className="bg-gray-400 p-1 rounded-full">
+            <div className="bg-gray-300 p-1 rounded-full">
               <IoLocationOutline color={theme === 'dark' ? '#be123c' : ''} />
             </div>
             <time className="font-caveat font-extrabold text-xs text-gray-500 dark:text-gray-400">
