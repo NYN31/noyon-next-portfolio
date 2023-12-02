@@ -33,3 +33,4 @@ export interface CompetitiveProgramingCardProps {
 }
 
 export type SectionName = (typeof NAVBAR_LINKS)[number]['name'];
+export type Theme = 'light' | 'dark';
