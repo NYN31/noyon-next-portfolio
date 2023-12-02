@@ -48,7 +48,7 @@ const CompetitiveProgramingCard: React.FC<{
           <p className="text-slate-700 dark:text-gray-400">{cp.totalSolve}</p>
         </div>
 
-        <Link href={cp.link} className="mt-2">
+        <Link href={cp.link} target="_blank" className="mt-2">
           <Button content={'Click me!'} />
         </Link>
       </div>
