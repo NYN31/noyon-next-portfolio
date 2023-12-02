@@ -1,8 +1,7 @@
 export const MY_EDUCATION = 'Education';
-import Image from 'next/image';
 import { LiaUniversitySolid } from 'react-icons/lia';
 import { IoSchoolOutline } from 'react-icons/io5';
-import { LuSchool } from 'react-icons/lu';
+import { LuSchool2 } from "react-icons/lu";
 
 export const ICON_SIZE = 24;
 export const academicDegrees = [
@@ -25,6 +24,6 @@ export const academicDegrees = [
     institute: 'Madambibir Hat Shah Jahan High School',
     passingYear: 'Passing year 2014',
     gpa: 'GPA 5.00/5.00',
-    icon: <LuSchool fontSize={ICON_SIZE} />,
+    icon: <LuSchool2 fontSize={ICON_SIZE} />,
   },
 ];
