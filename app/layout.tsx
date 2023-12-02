@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import './globals.css';
 import { DM_Mono } from 'next/font/google';
+import ActiveSectionContextProvider from '@/context/active-section-context';
 
 const dm_mono = DM_Mono({ weight: '400', subsets: [] });
 
@@ -15,12 +16,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="!scroll-smooth">
       <body
         className={`${dm_mono.className} bg-[#e5e7eb] text-gray-950 relative py-0 md:py-3 text-md md:text-lg`}
       >
-        <Header />
-        {children}
+        <ActiveSectionContextProvider>
+          <Header />
+          {children}
+        </ActiveSectionContextProvider>
       </body>
     </html>
   );

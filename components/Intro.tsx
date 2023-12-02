@@ -8,8 +8,11 @@ import { motion } from 'framer-motion';
 import { ABOUT_ME, NAME, SOCIAL_PROFILES } from '@/constants/IntroConstants';
 import SectionHeading from './SectionHeading';
 import GenericCard from './cards/GenericCard';
+import { useSectionInView } from '@/hooks/useSectionInView';
 
 const Intro = () => {
+  const { ref } = useSectionInView('Intro');
+
   const getAboutMeJsx = (style: string) => {
     return (
       <motion.p
@@ -26,7 +29,7 @@ const Intro = () => {
   };
 
   return (
-    <section id="intro" className="scroll-mt-32">
+    <section ref={ref} id="intro" className="scroll-mt-32">
       <GenericCard>
         <div className="space-y-5">
           <SectionHeading>Intro</SectionHeading>
@@ -67,7 +70,9 @@ const Intro = () => {
                 })}
               </motion.div>
 
-              {getAboutMeJsx('text-lg sm:text-base text-slate-700 hidden md:block')}
+              {getAboutMeJsx(
+                'text-lg sm:text-base text-slate-700 hidden md:block'
+              )}
             </div>
 
             <div className="flex justify-center items-center relative translate-x-7 md:translate-x-0 order-1 md:order-2">

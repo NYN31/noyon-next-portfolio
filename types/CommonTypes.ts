@@ -1,3 +1,5 @@
+import { NAVBAR_LINKS } from '@/constants/HeaderConstants';
+
 export type childrenProps = {
   children: React.ReactNode;
 };
@@ -29,3 +31,5 @@ export interface CompetitiveProgramingCardProps {
   totalSolve: string;
   link: string;
 }
+
+export type SectionName = (typeof NAVBAR_LINKS)[number]['name'];
