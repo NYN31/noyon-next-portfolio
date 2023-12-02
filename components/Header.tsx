@@ -45,7 +45,6 @@ const Header = () => {
       <nav className="flex fixed items-center justify-center p-0 top-0 h-22 py-2 left-1/2 -translate-x-1/2 md:top-[1.7rem] md:h-[initial] md:py-0 bg-white dark:bg-gray-800 border border-gray-200 shadow-lg md:rounded-full w-full md:w-[750px]">
         <ul className="flex flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-900 md:w-[initial] md:flex-nowrap md:gap-3">
           {NAVBAR_LINKS.map(link => {
-            if (link.name == activeSection) console.log(link);
             return (
               <li
                 key={link.hash}
