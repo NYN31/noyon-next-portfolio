@@ -103,7 +103,7 @@ const Intro = () => {
               {getSocialMediaIconJsx()}
 
               {getAboutMeJsx(
-                'text-lg sm:text-base text-slate-700 hidden md:block dark:text-gray-400'
+                'text-lg sm:text-base text-slate-700 hidden md:block dark:text-gray-400 text-justify	'
               )}
             </div>
 
@@ -113,7 +113,7 @@ const Intro = () => {
           </div>
           <div className="md:hidden">
             <GenericCard>
-              {getAboutMeJsx('pt-2 text-sm sm:text-md block md:hidden')}
+              {getAboutMeJsx('pt-2 text-sm sm:text-md block md:hidden text-justify')}
             </GenericCard>
           </div>
         </div>

@@ -1,44 +1,19 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { NAVBAR_LINKS } from '@/constants/HeaderConstants';
 import { motion } from 'framer-motion';
 import { useActiveSectionContext } from '@/context/active-section-context';
 import { FaSun } from 'react-icons/fa';
-import { FaMoon } from "react-icons/fa";
-import { Theme } from '@/types/CommonTypes';
+import { FaMoon } from 'react-icons/fa';
 import { IconContext } from 'react-icons';
+import { useTheme } from '@/context/theme-context';
 
 const Header = () => {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
-  const [theme, setTheme] = useState<Theme>('light');
-
-  const toggleTheme = () => {
-    if (theme === 'light') {
-      setTheme('dark');
-      window.localStorage.setItem('theme', 'dark');
-      document.documentElement.classList.add('dark');
-    } else {
-      setTheme('light');
-      window.localStorage.setItem('theme', 'light');
-      document.documentElement.classList.remove('dark');
-    }
-  };
-
-  useEffect(() => {
-    const localTheme = window.localStorage.getItem('theme') as Theme | null;
-
-    if (localTheme) {
-      setTheme(localTheme);
-
-      if (localTheme === 'dark') document.documentElement.classList.add('dark');
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      setTheme('dark');
-      document.documentElement.classList.add('dark');
-    }
-  }, []);
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <header className="z-[999] relative">

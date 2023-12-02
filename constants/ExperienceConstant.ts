@@ -12,14 +12,14 @@ export const experiencesData = [
     title: 'Teaching Asistant @ IIUC',
     location: 'Kumira, Sitakunda, Chittagong',
     description:
-      'I worked as a teacher assistant for 6 months in my university when I had been persuing my undergraduate degree on CSE.',
+      '<li>I worked as a teacher assistant for 6 months in my university when I had been persuing my undergraduate degree on CSE.</li>',
     date: 'July 2020 - Dec 2020',
   },
   {
     title: 'CP Trainer @ IIUC',
     location: 'Kumira, Sitakunda, Chittagong',
     description:
-      'I worked as a Competitive programming trainer for 3 months in my university when I had been persuing my undergraduate degree on CSE.',
+      '<li>I worked as a Competitive programming trainer for 3 months in my university when I had been persuing my undergraduate degree on CSE.</li>',
     date: 'Nov 2020 - Feb 2021',
   },
 ];

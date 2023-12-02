@@ -1,4 +1,5 @@
 import { ExperienceProps } from '@/types/CommonTypes';
+import { IoLocationOutline } from 'react-icons/io5';
 import React from 'react';
 
 const ExperienceCard: React.FC<{ experience: ExperienceProps }> = ({
@@ -22,16 +23,21 @@ const ExperienceCard: React.FC<{ experience: ExperienceProps }> = ({
 
       <div className="w-[calc(100%-2.3rem)] sm:w-[calc(100%-3rem)] md:w-[calc(100%-4rem)] bg-white dark:bg-gray-900 p-6 rounded-lg border border-gray-300 dark:border-gray-700 shadow-lg space-y-5">
         <div className="flex flex-col space-y-1">
-          <div className="font-bold text-slate-900 dark:text-slate-50">{experience.title}</div>
-          <time className="font-caveat font-extrabold text-xs text-gray-500 dark:text-gray-400">
-            {experience.location}
-          </time>
+          <div className="font-bold text-slate-900 dark:text-slate-50">
+            {experience.title}
+          </div>
+          <div className="flex flex-row gap-3">
+            <IoLocationOutline />
+            <time className="font-caveat font-extrabold text-xs text-gray-500 dark:text-gray-400">
+              {experience.location}
+            </time>
+          </div>
           <time className="font-caveat font-medium text-gray-900 dark:text-gray-100">
             {experience.date}
           </time>
         </div>
         <div
-          className="text-slate-700 dark:text-gray-400"
+          className="text-slate-700 dark:text-gray-400 text-justify	"
           dangerouslySetInnerHTML={{ __html: experience.description }}
         ></div>
       </div>
