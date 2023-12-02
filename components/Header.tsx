@@ -1,48 +1,23 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { NAVBAR_LINKS } from '@/constants/HeaderConstants';
 import { motion } from 'framer-motion';
 import { useActiveSectionContext } from '@/context/active-section-context';
 import { FaSun } from 'react-icons/fa';
-import { FaMoon } from "react-icons/fa";
-import { Theme } from '@/types/CommonTypes';
+import { FaMoon } from 'react-icons/fa';
 import { IconContext } from 'react-icons';
+import { useTheme } from '@/context/theme-context';
 
 const Header = () => {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
-  const [theme, setTheme] = useState<Theme>('light');
-
-  const toggleTheme = () => {
-    if (theme === 'light') {
-      setTheme('dark');
-      window.localStorage.setItem('theme', 'dark');
-      document.documentElement.classList.add('dark');
-    } else {
-      setTheme('light');
-      window.localStorage.setItem('theme', 'light');
-      document.documentElement.classList.remove('dark');
-    }
-  };
-
-  useEffect(() => {
-    const localTheme = window.localStorage.getItem('theme') as Theme | null;
-
-    if (localTheme) {
-      setTheme(localTheme);
-
-      if (localTheme === 'dark') document.documentElement.classList.add('dark');
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      setTheme('dark');
-      document.documentElement.classList.add('dark');
-    }
-  }, []);
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <header className="z-[999] relative">
-      <nav className="flex fixed items-center justify-center p-0 top-0 h-22 py-2 left-1/2 -translate-x-1/2 md:top-[1.7rem] md:h-[initial] md:py-0 bg-white dark:bg-gray-800 border border-gray-200 shadow-lg md:rounded-full w-full md:w-[750px]">
+      <nav className="flex fixed items-center justify-center p-0 top-0 h-22 py-2 left-1/2 -translate-x-1/2 md:top-[1.7rem] md:h-[initial] md:py-0 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 shadow-lg md:rounded-full w-full md:w-[750px]">
         <ul className="flex flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-900 md:w-[initial] md:flex-nowrap md:gap-3">
           {NAVBAR_LINKS.map(link => {
             return (

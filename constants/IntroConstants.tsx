@@ -15,31 +15,26 @@ export const SOCIAL_PROFILES = [
   {
     link: 'https://twitter.com/noyon310197',
     title: 'Twitter',
-    icon: <FaTwitter size={ICON_SIZE} />,
-    color: '#1DA1F2',
+    icon: <FaTwitter color="#1DA1F2" size={ICON_SIZE} />,
   },
   {
     link: 'https://github.com/NYN31',
     title: 'Github',
-    icon: <FaGithub size={ICON_SIZE} />,
-    color: 'gray-700',
+    icon: <FaGithub color="" size={ICON_SIZE} />,
   },
   {
     link: 'https://www.linkedin.com/in/noyon31/',
     title: 'LinkedIn',
-    icon: <FaLinkedin size={ICON_SIZE} />,
-    color: '#0077B5',
+    icon: <FaLinkedin color="#0077B5" size={ICON_SIZE} />,
   },
   {
     link: 'https://stackoverflow.com/users/19215771/md-sajjad-hosen-noyon',
     title: 'Stackoverflow',
-    icon: <FaStackOverflow size={ICON_SIZE} />,
-    color: '#EF8236',
+    icon: <FaStackOverflow color="#EF8236" size={ICON_SIZE} />,
   },
   {
     link: 'mailto:noyoncse3101@gmail.com',
     title: 'Gmail',
-    icon: <IoIosMail size={ICON_SIZE} />,
-    color: '#D44638',
+    icon: <IoIosMail color="#D44638" size={ICON_SIZE} />,
   },
 ];

@@ -22,6 +22,7 @@ export interface EducationProps {
   institute: string;
   passingYear: string;
   gpa: string;
+  icon: JSX.Element;
 }
 
 export interface CompetitiveProgramingCardProps {
@@ -30,6 +31,7 @@ export interface CompetitiveProgramingCardProps {
   participationInContest: string;
   totalSolve: string;
   link: string;
+  icon: JSX.Element;
 }
 
 export type SectionName = (typeof NAVBAR_LINKS)[number]['name'];
