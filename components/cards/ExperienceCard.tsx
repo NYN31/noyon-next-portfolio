@@ -6,7 +6,7 @@ const ExperienceCard: React.FC<{ experience: ExperienceProps }> = ({
 }) => {
   return (
     <div className="relative flex items-center justify-between group is-active">
-      <div className="flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full border border-white bg-slate-300 group-[.is-active]:bg-emerald-500 group-[.is-active]:text-emerald-50 shadow shrink-1">
+      <div className="flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full border border-white dark:border-gray-700 bg-slate-300 group-[.is-active]:bg-emerald-500 group-[.is-active]:text-emerald-50 shadow shrink-1">
         <svg
           className="fill-current"
           xmlns="http://www.w3.org/2000/svg"
@@ -20,18 +20,18 @@ const ExperienceCard: React.FC<{ experience: ExperienceProps }> = ({
         </svg>
       </div>
 
-      <div className="w-[calc(100%-2.3rem)] sm:w-[calc(100%-3rem)] md:w-[calc(100%-4rem)] bg-white p-6 rounded-lg border border-gray-300 shadow-lg space-y-5">
+      <div className="w-[calc(100%-2.3rem)] sm:w-[calc(100%-3rem)] md:w-[calc(100%-4rem)] bg-white dark:bg-gray-900 p-6 rounded-lg border border-gray-300 dark:border-gray-700 shadow-lg space-y-5">
         <div className="flex flex-col space-y-1">
-          <div className="font-bold text-slate-900">{experience.title}</div>
-          <time className="font-caveat font-extrabold text-xs text-gray-500">
+          <div className="font-bold text-slate-900 dark:text-slate-50">{experience.title}</div>
+          <time className="font-caveat font-extrabold text-xs text-gray-500 dark:text-gray-400">
             {experience.location}
           </time>
-          <time className="font-caveat font-medium text-gray-900">
+          <time className="font-caveat font-medium text-gray-900 dark:text-gray-100">
             {experience.date}
           </time>
         </div>
         <div
-          className="text-slate-700"
+          className="text-slate-700 dark:text-gray-400"
           dangerouslySetInnerHTML={{ __html: experience.description }}
         ></div>
       </div>

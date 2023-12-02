@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <body
-        className={`${dm_mono.className} bg-[#e5e7eb] text-gray-950 relative py-0 md:py-3 text-md md:text-lg`}
+        className={`${dm_mono.className} bg-[#e5e7eb] text-gray-950 relative py-0 md:py-3 text-md md:text-lg dark:bg-gray-800 dark:text-gray-50 dark:text-opacity-90`}
       >
         <ActiveSectionContextProvider>
           <Header />

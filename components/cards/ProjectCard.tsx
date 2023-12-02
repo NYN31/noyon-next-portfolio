@@ -10,7 +10,7 @@ const ProjectCard: React.FC<{ project: ProjectProps }> = ({ project }) => {
             <p className="text-lg font-bold">{project.title}</p>
           </div>
           <p
-            className="text-slate-700"
+            className="text-slate-700 dark:text-gray-400"
             dangerouslySetInnerHTML={{ __html: project.description }}
           ></p>
         </div>
@@ -19,7 +19,7 @@ const ProjectCard: React.FC<{ project: ProjectProps }> = ({ project }) => {
           {project.tags.map(tag => (
             <div
               key={tag}
-              className="border border-gray-300 py-1 px-3 rounded-full bg-slate-700 font-bold text-sm text-white shadow-lg hover:scale-105"
+              className="border border-gray-300 dark:border-gray-700 py-1 px-3 rounded-full bg-slate-700 dark:bg-gray-800 font-bold text-sm text-white dark:text-opacity-70 shadow-lg hover:scale-105"
             >
               {tag}
             </div>

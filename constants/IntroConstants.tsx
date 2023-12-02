@@ -3,8 +3,6 @@ import { FaGithub } from 'react-icons/fa';
 import { FaStackOverflow } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
 import { IoIosMail } from 'react-icons/io';
-// import { CiSun } from "react-icons/ci";
-// import { FaMoon } from "react-icons/fa";
 
 export const NAME = 'Md Sajjad Hosen Noyon';
 
@@ -24,7 +22,7 @@ export const SOCIAL_PROFILES = [
     link: 'https://github.com/NYN31',
     title: 'Github',
     icon: <FaGithub size={ICON_SIZE} />,
-    color: '#2B3137',
+    color: 'gray-700',
   },
   {
     link: 'https://www.linkedin.com/in/noyon31/',

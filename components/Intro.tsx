@@ -71,7 +71,7 @@ const Intro = () => {
               </motion.div>
 
               {getAboutMeJsx(
-                'text-lg sm:text-base text-slate-700 hidden md:block'
+                'text-lg sm:text-base text-slate-700 hidden md:block dark:text-gray-400'
               )}
             </div>
 

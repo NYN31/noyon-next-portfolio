@@ -13,7 +13,7 @@ const Education = () => {
     <section ref={ref} id="education" className="scroll-mt-32 ">
       <GenericCard>
         <SectionHeading>{MY_EDUCATION}</SectionHeading>
-        <div className="grid grid-cols-1 space-y-3">
+        <div className="grid grid-cols-1 gap-2">
           {academicDegrees.map((education, index) => (
             <EducationCard key={index} education={education} />
           ))}
