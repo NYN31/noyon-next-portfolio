@@ -12,7 +12,7 @@ export const competitiveProgramingDetails = [
   {
     name: 'Codechef',
     topRating: 'Top rating 1678',
-    participationInContest: 'Participated in contests',
+    participationInContest: 'Participated in 15+ contests',
     totalSolve: 'Total 80+ prblem solved',
     link: 'https://www.codechef.com/users/noyon01',
     icon: (
