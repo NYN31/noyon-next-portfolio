@@ -36,12 +36,12 @@ const ExperienceCard: React.FC<{ experience: ExperienceProps }> = ({
               {experience.location}
             </time>
           </div>
-          <time className="font-caveat font-medium text-gray-900 dark:text-gray-100">
+          <time className="font-medium text-gray-900 dark:text-gray-100">
             {experience.date}
           </time>
         </div>
         <div
-          className="text-slate-700 dark:text-gray-400 text-justify	"
+          className="text-slate-700 dark:text-gray-400"
           dangerouslySetInnerHTML={{ __html: experience.description }}
         ></div>
       </div>
