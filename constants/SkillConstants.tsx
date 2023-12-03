@@ -1,6 +1,7 @@
 import { FaHtml5 } from 'react-icons/fa';
 import { IoLogoCss3 } from 'react-icons/io5';
 import { SiTailwindcss } from 'react-icons/si';
+import { SiChakraui } from "react-icons/si";
 import { IoLogoJavascript } from 'react-icons/io';
 import { TbBrandTypescript } from 'react-icons/tb';
 import { FaReact } from 'react-icons/fa';
@@ -21,6 +22,10 @@ export const skillsData = [
   {
     name: 'Tailwind',
     icon: <SiTailwindcss color="#3490dc" fontSize={ICON_SIZE} />,
+  },
+  {
+    name: 'Chakra UI',
+    icon: <SiChakraui color="#06b6d4" fontSize={ICON_SIZE} />,
   },
   {
     name: 'JavaScript',
