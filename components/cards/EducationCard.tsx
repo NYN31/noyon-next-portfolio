@@ -23,7 +23,7 @@ const EducationCard: React.FC<{ education: EducationProps }> = ({
         <div className="flex flex-row gap-4 items-center">
           <div>
             <FaRegCheckCircle
-              color={theme === 'dark' ? 'cyan' : ''}
+              color={theme === 'dark' ? '#0e7490' : ''}
               fontSize={ICON_SIZE}
             />
           </div>
@@ -34,7 +34,7 @@ const EducationCard: React.FC<{ education: EducationProps }> = ({
         <div className="flex flex-row gap-4 items-center">
           <div>
             <FaRegCheckCircle
-              color={theme === 'dark' ? 'cyan' : ''}
+              color={theme === 'dark' ? '#0e7490' : ''}
               fontSize={ICON_SIZE}
             />
           </div>
@@ -45,7 +45,7 @@ const EducationCard: React.FC<{ education: EducationProps }> = ({
         <div className="flex flex-row gap-4 items-center">
           <div>
             <FaRegCheckCircle
-              color={theme === 'dark' ? 'cyan' : ''}
+              color={theme === 'dark' ? '#0e7490' : ''}
               fontSize={ICON_SIZE}
             />
           </div>

@@ -13,9 +13,9 @@ const Intro = () => {
 
   const getAboutMeJsx = (style: string) => {
     return (
-      <p className={style}>
+      <div className={style}>
         <div dangerouslySetInnerHTML={{ __html: ABOUT_ME }} />
-      </p>
+      </div>
     );
   };
 
@@ -35,6 +35,7 @@ const Intro = () => {
             <a
               key={link.title}
               href={link.link}
+              area-aria-level={link.title}
               target="_blank"
               className="hover:scale-110 transition-all ease-out size-100"
             >
@@ -61,10 +62,10 @@ const Intro = () => {
   return (
     <section ref={ref} id="intro" className="scroll-mt-32">
       <GenericCard>
-        <div className="space-y-5">
+        <div className="flex flex-col gap-8">
           <SectionHeading>Intro</SectionHeading>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
-            <div className="col-span-4 md:col-span-3 space-y-3 flex flex-col items-center md:items-start order-2 md:order-1">
+            <div className="col-span-4 md:col-span-3 gap-3 flex flex-col items-center md:items-start order-2 md:order-1">
               {getNameJsx()}
 
               {getSocialMediaIconJsx()}

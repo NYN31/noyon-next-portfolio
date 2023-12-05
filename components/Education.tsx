@@ -12,11 +12,13 @@ const Education = () => {
   return (
     <section ref={ref} id="education" className="scroll-mt-32 ">
       <GenericCard>
-        <SectionHeading>{MY_EDUCATION}</SectionHeading>
-        <div className="grid grid-cols-1 gap-2">
-          {academicDegrees.map((education, index) => (
-            <EducationCard key={index} education={education} />
-          ))}
+        <div className="flex flex-col gap-8">
+          <SectionHeading>{MY_EDUCATION}</SectionHeading>
+          <div className="grid grid-cols-1 gap-2">
+            {academicDegrees.map((education, index) => (
+              <EducationCard key={index} education={education} />
+            ))}
+          </div>
         </div>
       </GenericCard>
     </section>

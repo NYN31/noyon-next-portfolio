@@ -13,13 +13,15 @@ const Projects = () => {
   return (
     <section ref={ref} id="projects" className="scroll-mt-32">
       <GenericCard>
-        <SectionHeading>{PROJECT_HEADING}</SectionHeading>
-        <div className="grid grid-cols-1 gap-2">
-          {projectsData.map((project, index) => (
-            <React.Fragment key={index}>
-              <ProjectCard project={project} />
-            </React.Fragment>
-          ))}
+        <div className="flex flex-col gap-8">
+          <SectionHeading>{PROJECT_HEADING}</SectionHeading>
+          <div className="grid grid-cols-1 gap-2">
+            {projectsData.map((project, index) => (
+              <React.Fragment key={index}>
+                <ProjectCard project={project} />
+              </React.Fragment>
+            ))}
+          </div>
         </div>
       </GenericCard>
     </section>

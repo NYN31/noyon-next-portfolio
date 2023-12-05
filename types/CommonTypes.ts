@@ -7,7 +7,7 @@ export type childrenProps = {
 export interface ExperienceProps {
   title: string;
   location: string;
-  description: string;
+  description: string[];
   date: string;
 }
 

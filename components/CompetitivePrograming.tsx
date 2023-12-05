@@ -16,11 +16,13 @@ const CompetitivePrograming = () => {
   return (
     <section ref={ref} id="cp" className="scroll-mt-32">
       <GenericCard>
-        <SectionHeading>{COMPETITIVE_PROGRAMING_HEADING}</SectionHeading>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-          {competitiveProgramingDetails.map((cp, index) => (
-            <CompetitiveProgramingCard key={index} cp={cp} />
-          ))}
+        <div className="flex flex-col gap-8">
+          <SectionHeading>{COMPETITIVE_PROGRAMING_HEADING}</SectionHeading>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+            {competitiveProgramingDetails.map((cp, index) => (
+              <CompetitiveProgramingCard key={index} cp={cp} />
+            ))}
+          </div>
         </div>
       </GenericCard>
     </section>

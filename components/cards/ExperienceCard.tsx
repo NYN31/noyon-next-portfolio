@@ -17,13 +17,13 @@ const ExperienceCard: React.FC<{ experience: ExperienceProps }> = ({
           height="10"
         >
           <path
-            fill-rule="nonzero"
+            fillRule="nonzero"
             d="M10.422 1.257 4.655 7.025 2.553 4.923A.916.916 0 0 0 1.257 6.22l2.75 2.75a.916.916 0 0 0 1.296 0l6.415-6.416a.916.916 0 0 0-1.296-1.296Z"
           />
         </svg>
       </div>
 
-      <div className="w-[calc(100%-2.3rem)] sm:w-[calc(100%-3rem)] md:w-[calc(100%-4rem)] bg-white dark:bg-gray-900 p-6 rounded-lg border border-gray-300 dark:border-gray-700 shadow-lg space-y-5">
+      <div className="w-[calc(100%-2.3rem)] sm:w-[calc(100%-3rem)] md:w-[calc(100%-4rem)] bg-white dark:bg-gray-900 p-5 sm:p-6 rounded-lg border border-gray-300 dark:border-gray-700 shadow-lg space-y-5">
         <div className="flex flex-col space-y-1">
           <div className="font-bold text-slate-900 dark:text-slate-50">
             {experience.title}
@@ -40,13 +40,24 @@ const ExperienceCard: React.FC<{ experience: ExperienceProps }> = ({
             {experience.date}
           </time>
         </div>
-        <div
-          className="text-slate-700 dark:text-gray-400"
-          dangerouslySetInnerHTML={{ __html: experience.description }}
-        ></div>
+        <div className="text-slate-700 dark:text-gray-400">
+          <ul className="list-disc">
+            {experience.description.map((des, index) => {
+              return (
+                <li
+                  key={index}
+                  className={`${des.length === 1 ? 'text-justify' : ''}`}
+                >
+                  {des}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </div>
     </div>
   );
 };
 
 export default ExperienceCard;
+//style="list-style-type:disc;margin-left:20px;"
