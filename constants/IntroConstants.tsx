@@ -6,6 +6,8 @@ import { IoIosMail } from 'react-icons/io';
 
 export const NAME = 'Md Sajjad Hosen Noyon';
 
+export const INTRO_HEADING = 'Intro';
+
 export const ABOUT_ME =
   '<p>Hello, I am passionate <em><b>software engineer and problem solver</b></em>. I am currently working at <em><b>@Exabyting</b></em> as Software Engineer with <em><b>2 years</b></em> of professional experience.</p>';
 

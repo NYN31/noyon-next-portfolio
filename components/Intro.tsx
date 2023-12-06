@@ -1,28 +1,23 @@
-'use client';
-
 import Image from 'next/image';
 import React from 'react';
 import profile_image from '@/public/profile_pic.jpg';
-import { ABOUT_ME, NAME, SOCIAL_PROFILES } from '@/constants/IntroConstants';
+import { ABOUT_ME, INTRO_HEADING, NAME, SOCIAL_PROFILES } from '@/constants/IntroConstants';
 import SectionHeading from './SectionHeading';
 import GenericCard from './cards/GenericCard';
-import { useSectionInView } from '@/hooks/useSectionInView';
 
 const Intro = () => {
-  const { ref } = useSectionInView('Intro');
-
   const getAboutMeJsx = (style: string) => {
     return (
-      <p className={style}>
+      <div className={style}>
         <div dangerouslySetInnerHTML={{ __html: ABOUT_ME }} />
-      </p>
+      </div>
     );
   };
 
   const getNameJsx = () => {
     return (
       <div className="flex justify-between text-lg md:text-2xl font-medium">
-        <h1>{NAME}</h1>
+        {NAME}
       </div>
     );
   };
@@ -35,6 +30,7 @@ const Intro = () => {
             <a
               key={link.title}
               href={link.link}
+              area-level={link.title}
               target="_blank"
               className="hover:scale-110 transition-all ease-out size-100"
             >
@@ -59,12 +55,12 @@ const Intro = () => {
   };
 
   return (
-    <section ref={ref} id="intro" className="scroll-mt-32">
+    <section id="intro" className="scroll-mt-32">
       <GenericCard>
-        <div className="space-y-5">
-          <SectionHeading>Intro</SectionHeading>
+        <div className="flex flex-col gap-8">
+        <SectionHeading heading={INTRO_HEADING} />
           <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
-            <div className="col-span-4 md:col-span-3 space-y-3 flex flex-col items-center md:items-start order-2 md:order-1">
+            <div className="col-span-4 md:col-span-3 gap-3 flex flex-col items-center md:items-start order-2 md:order-1">
               {getNameJsx()}
 
               {getSocialMediaIconJsx()}

@@ -55,6 +55,7 @@ const Header = () => {
             );
           })}
           <button
+            name="icon"
             className="ml-4 rounded-full border-opacity-40 flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all"
             onClick={toggleTheme}
           >

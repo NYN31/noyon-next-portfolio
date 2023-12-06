@@ -15,6 +15,8 @@ import { ICON_SIZE } from './CpConstant';
 
 export const options = ['All', 'Design', 'Language', 'Framework', 'Others'];
 
+export const SKILL_HEADING = 'My Skill';
+
 export const allSkills = [
   {
     name: 'HTML',
