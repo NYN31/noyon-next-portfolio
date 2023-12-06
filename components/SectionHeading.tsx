@@ -1,14 +1,8 @@
 import React from 'react';
 
-type SectionHeadingProps = {
-  children: React.ReactNode;
-};
-
-const SectionHeading = ({ children }: SectionHeadingProps) => {
+const SectionHeading: React.FC<{ heading: string }> = ({ heading }) => {
   return (
-    <div className="text-3xl font-medium uppercase text-center">
-      {children}
-    </div>
+    <div className="text-3xl font-medium uppercase text-center">{heading}</div>
   );
 };
 

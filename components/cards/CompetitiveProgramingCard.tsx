@@ -1,5 +1,4 @@
 import { ICON_SIZE } from '@/constants/CpConstant';
-import { useTheme } from '@/context/theme-context';
 import { CompetitiveProgramingCardProps } from '@/types/CommonTypes';
 import Link from 'next/link';
 import React from 'react';
@@ -9,7 +8,6 @@ import Button from '../common/Button';
 const CompetitiveProgramingCard: React.FC<{
   cp: CompetitiveProgramingCardProps;
 }> = ({ cp }) => {
-  const { theme } = useTheme();
   return (
     <div className="flex flex-col border border-gray-300 dark:border-gray-700 rounded-lg shadow-lg">
       <div className="flex flex-col justify-between gap-y-2 hover:scale-[1.01] ease-out transition-transform p-5">
@@ -20,19 +18,13 @@ const CompetitiveProgramingCard: React.FC<{
 
         <div className="flex flex-row gap-4 items-center">
           <div className="w-auto">
-            <FaRegCheckCircle
-              color={theme === 'dark' ? '#0e7490' : ''}
-              fontSize={ICON_SIZE}
-            />
+            <FaRegCheckCircle color="#0e7490" fontSize={ICON_SIZE} />
           </div>
           <p className="text-slate-700 dark:text-gray-400">{cp.topRating}</p>
         </div>
         <div className="flex flex-row gap-4 items-center">
           <div className="w-auto">
-            <FaRegCheckCircle
-              color={theme === 'dark' ? '#0e7490' : ''}
-              fontSize={ICON_SIZE}
-            />
+            <FaRegCheckCircle color="#0e7490" fontSize={ICON_SIZE} />
           </div>
           <p className="text-slate-700 dark:text-gray-400">
             {cp.participationInContest}
@@ -40,10 +32,7 @@ const CompetitiveProgramingCard: React.FC<{
         </div>
         <div className="flex flex-row gap-4 items-center">
           <div className="w-auto">
-            <FaRegCheckCircle
-              color={theme === 'dark' ? '#0e7490' : ''}
-              fontSize={ICON_SIZE}
-            />
+            <FaRegCheckCircle color="#0e7490" fontSize={ICON_SIZE} />
           </div>
           <p className="text-slate-700 dark:text-gray-400">{cp.totalSolve}</p>
         </div>

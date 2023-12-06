@@ -7,6 +7,7 @@ import {
   languateSkills,
   frameworkSkills,
   otherSkills,
+  SKILL_HEADING,
 } from '@/constants/SkillConstants';
 import React, { useState } from 'react';
 import SectionHeading from './SectionHeading';
@@ -41,7 +42,7 @@ const TechSkills = () => {
     <section id="skills" className="scroll-mt-32">
       <GenericCard>
         <div className="flex flex-col gap-8">
-          <SectionHeading>My skills</SectionHeading>
+          <SectionHeading heading={SKILL_HEADING} />
           <div className="flex flex-row items-center justify-center my-5 rounded-es-full w-auto">
             {options.map((option, index) => (
               <div
