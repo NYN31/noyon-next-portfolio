@@ -10,6 +10,14 @@ export const COMPETITIVE_PROGRAMING_HEADING = 'Competitive Programing';
 
 export const competitiveProgramingDetails = [
   {
+    name: 'LeetCode',
+    topRating: 'Top rating 0',
+    participationInContest: 'Participated in 0 contest',
+    totalSolve: 'Total 200+ prblem solved',
+    link: 'https://leetcode.com/NOYON31/',
+    icon: <Image src={leetcode} alt="leetcode" />,
+  },
+  {
     name: 'Codechef',
     topRating: 'Top rating 1678',
     participationInContest: 'Participated in 15+ contests',
@@ -46,21 +54,8 @@ export const competitiveProgramingDetails = [
     totalSolve: 'Total 50+ prblem solved',
     link: 'https://atcoder.jp/users/NOYON31',
     icon: (
-      <Image
-        src={atCoder}
-        alt="atcoder"
-        width={ICON_SIZE}
-        height={ICON_SIZE}
-      />
+      <Image src={atCoder} alt="atcoder" width={ICON_SIZE} height={ICON_SIZE} />
     ),
-  },
-  {
-    name: 'LeetCode',
-    topRating: 'Top rating 0',
-    participationInContest: 'Participated in 0 contest',
-    totalSolve: 'Total 80+ prblem solved',
-    link: 'https://leetcode.com/NOYON31/',
-    icon: <Image src={leetcode} alt="leetcode" />,
   },
   {
     name: 'Light Oj',
@@ -69,12 +64,7 @@ export const competitiveProgramingDetails = [
     totalSolve: 'Total 70+ prblem solved',
     link: 'https://lightoj.com/user/noyoncse3101',
     icon: (
-      <Image
-        src={lightOj}
-        alt="lightoj"
-        width={ICON_SIZE}
-        height={ICON_SIZE}
-      />
+      <Image src={lightOj} alt="lightoj" width={ICON_SIZE} height={ICON_SIZE} />
     ),
   },
 ];
